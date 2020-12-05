@@ -5,7 +5,7 @@ const { models: {Continent}, syncAndSeed} = require('./db');
 
 const app = express();
 
-app.use('/dist', static(path.join(__dirname, '../dist')));
+app.use('/public', static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res, next)=>res.sendFile(path.join(__dirname, '../index.html')));
 

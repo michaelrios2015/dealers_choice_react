@@ -11,6 +11,7 @@ class App extends Component{
         };
     }
     async componentDidMount(){
+        console.log('component did mount');
         this.setState({
             continents: (await axios.get('/api/continents')).data,
             loading: false
